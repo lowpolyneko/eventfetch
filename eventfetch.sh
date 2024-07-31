@@ -12,7 +12,7 @@ fi
 # gather event info interactively
 if [ -z "${EVENT_IMG}" ]
 then
-    echo "Event Flyer Image (leave blank for default-logo.png): "
+    echo "Event Flyer Image Path (leave blank for default-logo.png): "
     read -r EVENT_IMG && [ -z "${EVENT_IMG}" ] && EVENT_IMG="default-logo.png"
 fi
 
@@ -107,7 +107,7 @@ EOF
 
 # display and screenshot
 clear
-./neowofetch --config neowofetch.conf --sixel default-logo.png
+./neowofetch --config neowofetch.conf
 
 
 # cleanup
